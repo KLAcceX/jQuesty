@@ -1,3 +1,5 @@
+const cursorDelay = 500;
+
 const panel = {
 	clear : function(){
   	$('#panel').text('');
@@ -16,4 +18,28 @@ function typeText(message){
 
 $(function(){ //start gomes
 	typeText('Alalalalal');
+  $("#panelIpt").focus();
+});
+
+
+window.setInterval(function () {
+    if ($('#iptCursor').css('visibility') === 'visible') {
+        $('#iptCursor').css({
+            visibility: 'hidden'
+        });
+    } else {
+        $('#iptCursor').css({
+            visibility: 'visible'
+        });
+    }
+}, cursorDelay);
+
+$(document).keypress(function(e) {
+  if (e.which === 13) {
+    e.preventDefault();
+    console.log($('#panelIpt').text());
+    //$("#iptCursor").remove();
+    $("#panelIpt").append('<div id="cursor"></div>');
+    $("#panelIpt").focus();
+  }
 });

@@ -14,13 +14,42 @@
 		  background-color: black;
 		}
 
+		#panel div{
+			display: inline-block;
+		}
+
 		#panelTxt{
 		  color: white;
+		}
+
+		#panelIpt{
+			color: transparent;
+			background-color: black;
+			border: 0px;
+		}
+
+		#panelIpt:focus
+		{
+		  	color: transparent;
+  			text-shadow: 0px 0px 0px white;
+			border-color: black;  
+			border: 0px;
+			outline:none;
+		}
+
+		#iptCursor
+		{
+			background-color: white;
+			width: 5px;
+			height: 10px;
+			margin-left: -4.5px;
 		}
 	</style>
 	<body>
 		<div id="panel">
 		  <p id="panelTxt"></p>
+		  <div id="panelIpt" type="text" contenteditable="true"></div>
+		  <div id="iptCursor"></div>
 		</div>
 	</body>
 </html>
