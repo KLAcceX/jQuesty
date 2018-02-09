@@ -21,7 +21,6 @@ const PAINEL = {
     $('#painelTxt').text('');
   },
   Digitar : function(mensagem, index){ //só será usado em casos muito específicos |-| mudança futura ??
-    console.log(mensagem);
     if (index < mensagem.length) {
       $('#painelTxt').append(mensagem[index++]);
       setTimeout(function () { PAINEL.Digitar(mensagem, index); }, BACKGROUND.MensagemIntervalo);
@@ -43,7 +42,6 @@ $(function(){
 });
 
 $(document).keypress(function(e) {
-  console.log("yolo");
   if (e.which === 13) {
     BACKGROUND.MensagemIntervalo = 0;
     e.preventDefault();
