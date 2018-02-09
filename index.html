@@ -4,31 +4,32 @@
 	</head>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="./typeHelper.js"></script>
-	<script src="./stats.js"></script>
+	<script src="./background.js"></script>
 	
 	<style>
-		#panel {
+		#painel {
 		  width: 500px;
 		  height: 200px;
 		  background-color: black;
 		}
 
-		#panel div{
+		#painel div{
 			display: inline-block;
 		}
 
-		#panelTxt{
-		  color: white;
+		#painelTxt{
+			display: block;
+			width: 100%;
+		  	color: white;
 		}
 
-		#panelIpt{
+		#painelIpt{
 			color: transparent;
 			background-color: black;
 			border: 0px;
 		}
 
-		#panelIpt:focus
+		#painelIpt:focus
 		{
 		  	color: transparent;
   			text-shadow: 0px 0px 0px white;
@@ -46,9 +47,9 @@
 		}
 	</style>
 	<body>
-		<div id="panel">
-		  <p id="panelTxt"></p>
-		  <div id="panelIpt" type="text" contenteditable="true"></div>
+		<div id="painel">
+		  <p id="painelTxt"></p>
+		  <div id="painelIpt" type="text" contenteditable="true"></div>
 		  <div id="iptCursor"></div>
 		</div>
 	</body>
