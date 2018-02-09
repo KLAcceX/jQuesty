@@ -1,3 +1,5 @@
+var prosseguir;
+
 const BACKGROUND = {
   CursorDelay : 200,
   MensagemIntervalo : 50,
@@ -42,6 +44,9 @@ const PAINEL = {
 
 $(document).on('keydown',function(e){
   if (e.which === 13) {
+    if($('#painelIpt').text().length > 0){
+      prosseguir($('#painelIpt').text());
+    }
     e.preventDefault();
     BACKGROUND.MensagemIntervalo = 0;
   }
