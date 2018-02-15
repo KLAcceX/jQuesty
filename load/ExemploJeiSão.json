@@ -1,0 +1,22 @@
+{
+	"Mago" : {
+		"hp" : 10,
+		"mp": 20
+	},
+	"Guerreiro" : {
+		"hp" : 20,
+		"mp" : 5
+	},
+	"Ladino" : {
+		"hp" : 10,
+		"mp" : 15
+	},
+	"Arqueiro" : {
+		"hp" : 10,
+		"mp" : 15
+	},
+	"Clérigo" : {
+		"hp" : 10,
+		"mp" : 20
+	}
+}
